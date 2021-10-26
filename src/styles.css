@@ -11,7 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: darkgrey;
+  min-height: 100vh;
 }
 
 .title {
@@ -33,4 +33,25 @@ body {
 
 .opponent {
   color: blue;
+}
+
+.btn {
+  width: 80px;
+  height: 40px;
+  background-color: aquamarine;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: auto;
+}
+
+.box {
+  width: 80px;
+  height: 80px;
+  background-color: gold;
+  border: 1px solid black;
 }

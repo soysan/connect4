@@ -1,0 +1,29 @@
+{
+  "name": "connect4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soysan/connect4.git"
+  },
+  "author": "Masayuki Yamaguchi <stout22.dark@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/soysan/connect4/issues"
+  },
+  "homepage": "https://github.com/soysan/connect4#readme",
+  "dependencies": {
+    "typescript": "^4.4.4"
+  },
+  "devDependencies": {
+    "ts-loader": "^9.2.6",
+    "webpack": "^5.60.0",
+    "webpack-cli": "^4.9.1"
+  }
+}

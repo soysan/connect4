@@ -13,7 +13,7 @@ class Model {
 
   private generateField(): string[][] {
     let resArr = [];
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 7; i++) {
       let currArr = this.row.slice();
       resArr.push(currArr);
     }
@@ -63,21 +63,29 @@ class View {
         <h3 class="opponent">Opponent</h3>
       </div>
     </div>
-    <div id="game-board"></div>
+    <div id="game-board" class="field"></div>
     `;
     target.appendChild(container);
   };
 
-  static showField(state: Model) {
-    
+  static showField(state: string[][]) {
+    const div: HTMLDivElement = document.querySelector("#game-board")!;
+
+    for(let i = 0; i < state.length; i++){
+      for(let j = 0; j < state[i].length; j++){
+        let box: HTMLDivElement = document.createElement('div');
+        box.innerHTML = `<div id=${"" + i + j} class=${i === 0 ? "btn" : "box"}></div>`;
+        div.appendChild(box);
+      }
+    }
   }
 }
 
 class Controller {
   static startGame() {
     const state = new Model();
-    console.log(state);
     View.initialPage();
+    View.showField(state.state);
   }
 }
 
